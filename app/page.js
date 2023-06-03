@@ -16,9 +16,9 @@ const Login = () =>{
     event.preventDefault()
     const {result,error} = await signIn(email,password)
     if(error){
-      console.log(error)
+      return error
     }else{
-      console.log(result)
+      console.log("Logged in")
     }
     return router.push('/home')
   }
